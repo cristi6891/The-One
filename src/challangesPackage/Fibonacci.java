@@ -10,19 +10,19 @@ public class Fibonacci {
 
         Scanner inputInteger = new Scanner(System.in);
         System.out.println("Please give your desired number: ");
-        long chosenNumber = inputInteger.nextInt();
+        int chosenNumber = inputInteger.nextInt();
         new Fibonacci().hundredFibonacciElements(closestFibonacci(chosenNumber));
 
 
     }
 
-    public static long closestFibonacci(long number) {
-        long nearest;
+    public static int closestFibonacci(int number) {
+        int nearest;
 
 
-        long first = 0;
-        long second = 1;
-        long third = first + second;
+        int first = 0;
+        int second = 1;
+        int third = first + second;
 
         if (number == 0) {
             nearest = number;
@@ -43,13 +43,13 @@ public class Fibonacci {
 
     }
 
-    public void hundredFibonacciElements(long givenNumber) {
+    public void hundredFibonacciElements(int givenNumber) {
         ArrayList<Integer> fibonacciSequence = new ArrayList<>();
         double x = givenNumber / ((1 + Math.sqrt(5)) / 2);
-        long previousNumber = (int) Math.round(x);
+        int previousNumber = (int) Math.round(x);
 
         for (int i = 0; i < 100; i++) {
-            long nextNumber = previousNumber + givenNumber;
+            int nextNumber = previousNumber + givenNumber;
             fibonacciSequence.add((int) nextNumber);
             previousNumber = givenNumber;
             givenNumber = nextNumber;

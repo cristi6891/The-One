@@ -1,4 +1,4 @@
-package soloPractice.JavaOOP1;
+package soloPractice.JavaOOP1.Methods;
 
 public class MethodOverloading {
 
